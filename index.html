@@ -21,6 +21,43 @@
 </head>
 <body>
 
+  <!-- ===== SPLASH SCREEN ===== -->
+  <div class="splash-screen" id="splash-screen">
+    <div class="splash-particles" id="splash-particles"></div>
+    <div class="splash-content">
+      <div class="splash-line-top"></div>
+      <div class="splash-name">
+        <span class="splash-first-name">
+          <span class="splash-letter" style="--i:0">V</span>
+          <span class="splash-letter" style="--i:1">i</span>
+          <span class="splash-letter" style="--i:2">p</span>
+          <span class="splash-letter" style="--i:3">u</span>
+          <span class="splash-letter" style="--i:4">r</span>
+          <span class="splash-letter" style="--i:5">a</span>
+        </span>
+        <span class="splash-last-name">
+          <span class="splash-letter" style="--i:6">D</span>
+          <span class="splash-letter" style="--i:7">e</span>
+          <span class="splash-letter" style="--i:8">v</span>
+          <span class="splash-letter" style="--i:9">n</span>
+          <span class="splash-letter" style="--i:10">a</span>
+          <span class="splash-letter" style="--i:11">k</span>
+        </span>
+      </div>
+      <div class="splash-tagline">
+        <span class="splash-tagline-text">Full Stack Developer & CS Undergraduate</span>
+      </div>
+      <div class="splash-line-bottom"></div>
+      <div class="splash-loader">
+        <div class="splash-loader-bar"></div>
+      </div>
+    </div>
+    <div class="splash-corner splash-corner-tl"></div>
+    <div class="splash-corner splash-corner-tr"></div>
+    <div class="splash-corner splash-corner-bl"></div>
+    <div class="splash-corner splash-corner-br"></div>
+  </div>
+
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <div class="container">
@@ -28,7 +65,7 @@
 
       <div class="nav-links" id="nav-links">
         <a href="#about">About</a>
-        <a href="#skills">Skills</a>
+        <a href="#stack">Stack</a>
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#contact">Contact</a>
@@ -82,15 +119,15 @@
 
         <div class="hero-stats reveal reveal-delay-5">
           <div class="hero-stat">
-            <div class="hero-stat-number" data-count="3" data-suffix="+">0+</div>
+            <div class="hero-stat-number" data-count="6" data-suffix="+">0+</div>
             <div class="hero-stat-label">Projects</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-number" data-count="6" data-suffix="+">0+</div>
+            <div class="hero-stat-number" data-count="24" data-suffix="+">0+</div>
             <div class="hero-stat-label">Technologies</div>
           </div>
           <div class="hero-stat">
-            <div class="hero-stat-number" data-count="2">0</div>
+            <div class="hero-stat-number" data-count="7">0</div>
             <div class="hero-stat-label">Certifications</div>
           </div>
         </div>
@@ -181,77 +218,148 @@
     </div>
   </section>
 
-  <!-- ===== SKILLS ===== -->
-  <section class="skills section" id="skills">
+  <!-- ===== MY STACK ===== -->
+  <section class="stack section" id="stack">
     <div class="container">
-      <div class="skills-header">
+      <div class="stack-header">
         <div class="section-label reveal">
-          <span class="dot"></span> Skills & Expertise
+          <span class="dot"></span> My Stack
         </div>
         <h2 class="section-title reveal reveal-delay-1">
           Technologies I <span class="gradient-text">work with</span>
         </h2>
-        <p class="section-subtitle reveal reveal-delay-2">
-          A blend of programming languages, frameworks, and tools that power my development workflow.
-        </p>
       </div>
 
-      <div class="skills-grid">
+      <div class="stack-rows">
         <!-- Programming -->
-        <div class="skill-card reveal">
-          <div class="skill-card-icon lime">⌨️</div>
-          <h3 class="skill-card-title">Programming</h3>
-          <p class="skill-card-description">
-            Building robust applications and solving complex problems with modern programming languages.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">SQL</span>
-            <span class="skill-tag">JavaFX</span>
+        <div class="stack-row reveal">
+          <div class="stack-category">
+            <span class="stack-category-name">Programming</span>
+          </div>
+          <div class="stack-items">
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" width="26" height="26" alt="Python" /></div>
+              <span class="stack-label">Python</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="26" height="26" alt="Java" /></div>
+              <span class="stack-label">Java</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" width="26" height="26" alt="SQL" /></div>
+              <span class="stack-label">SQL</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" width="26" height="26" alt="JavaFX" /></div>
+              <span class="stack-label">JavaFX</span>
+            </div>
           </div>
         </div>
 
         <!-- Web Development -->
-        <div class="skill-card reveal reveal-delay-1">
-          <div class="skill-card-icon orange">🌐</div>
-          <h3 class="skill-card-title">Web Development</h3>
-          <p class="skill-card-description">
-            Creating responsive, interactive web experiences with modern frontend technologies.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">JavaScript</span>
+        <div class="stack-row reveal reveal-delay-1">
+          <div class="stack-category">
+            <span class="stack-category-name">Web</span>
+          </div>
+          <div class="stack-items">
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" width="26" height="26" alt="HTML" /></div>
+              <span class="stack-label">HTML</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" width="26" height="26" alt="CSS" /></div>
+              <span class="stack-label">CSS</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" width="26" height="26" alt="JavaScript" /></div>
+              <span class="stack-label">JavaScript</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" width="26" height="26" alt="React" /></div>
+              <span class="stack-label">React</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" width="26" height="26" alt="Node.js" /></div>
+              <span class="stack-label">Node.js</span>
+            </div>
           </div>
         </div>
 
-        <!-- Databases -->
-        <div class="skill-card reveal reveal-delay-2">
-          <div class="skill-card-icon lime">🗄️</div>
-          <h3 class="skill-card-title">Database Management</h3>
-          <p class="skill-card-description">
-            Designing efficient database schemas and writing optimized queries for data-driven applications.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">SQL Queries</span>
-            <span class="skill-tag">Database Design</span>
-            <span class="skill-tag">Data Analysis</span>
+        <!-- Database -->
+        <div class="stack-row reveal reveal-delay-2">
+          <div class="stack-category">
+            <span class="stack-category-name">Database</span>
+          </div>
+          <div class="stack-items">
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" width="26" height="26" alt="SQL Queries" /></div>
+              <span class="stack-label">SQL Queries</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" width="26" height="26" alt="Database Design" /></div>
+              <span class="stack-label">Database Design</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" width="26" height="26" alt="Data Analysis" /></div>
+              <span class="stack-label">Data Analysis</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" width="26" height="26" alt="MongoDB" /></div>
+              <span class="stack-label">MongoDB</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" width="26" height="26" alt="Firebase" /></div>
+              <span class="stack-label">Firebase</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" width="26" height="26" alt="Supabase" /></div>
+              <span class="stack-label">Supabase</span>
+            </div>
           </div>
         </div>
 
         <!-- Tools -->
-        <div class="skill-card reveal reveal-delay-3">
-          <div class="skill-card-icon orange">🛠️</div>
-          <h3 class="skill-card-title">Tools & Workflow</h3>
-          <p class="skill-card-description">
-            Leveraging modern development tools for efficient collaboration and version control.
-          </p>
-          <div class="skill-tags">
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitHub</span>
-            <span class="skill-tag">VS Code</span>
-            <span class="skill-tag">Excel</span>
+        <div class="stack-row reveal reveal-delay-3">
+          <div class="stack-category">
+            <span class="stack-category-name">Tools</span>
+          </div>
+          <div class="stack-items">
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" width="26" height="26" alt="Git" /></div>
+              <span class="stack-label">Git</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" width="26" height="26" alt="GitHub" style="filter: invert(1) brightness(2);" /></div>
+              <span class="stack-label">GitHub</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" width="26" height="26" alt="VS Code" /></div>
+              <span class="stack-label">VS Code</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://img.icons8.com/color/48/microsoft-office-2019.png" width="26" height="26" alt="MS Office" /></div>
+              <span class="stack-label">MS Office</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" width="26" height="26" alt="Docker" /></div>
+              <span class="stack-label">Docker</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/archlinux/archlinux-original.svg" width="26" height="26" alt="Arch Linux" /></div>
+              <span class="stack-label">Arch Linux</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original.svg" width="26" height="26" alt="Jupyter" /></div>
+              <span class="stack-label">Jupyter</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" width="26" height="26" alt="Figma" /></div>
+              <span class="stack-label">Figma</span>
+            </div>
+            <div class="stack-item">
+              <div class="stack-icon"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" width="26" height="26" alt="Postman" /></div>
+              <span class="stack-label">Postman</span>
+            </div>
           </div>
         </div>
       </div>
@@ -318,7 +426,7 @@
               <span>CRUD</span>
               <span>GUI</span>
             </div>
-            <a href="#" class="project-card-link" target="_blank" rel="noopener">
+            <a href="https://github.com/Vipura/1st-Year-Python-Assessment.git" class="project-card-link" target="_blank" rel="noopener">
               View on GitHub
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
@@ -344,7 +452,7 @@
               <span>Photo Upload</span>
               <span>Geolocation</span>
             </div>
-            <a href="#" class="project-card-link" target="_blank" rel="noopener">
+            <a href="https://github.com/BinuraBimsara/SDGP-Project-V2.git" class="project-card-link" target="_blank" rel="noopener">
               View on GitHub
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
@@ -370,7 +478,82 @@
               <span>JavaScript</span>
               <span>Responsive</span>
             </div>
-            <a href="#" class="project-card-link" target="_blank" rel="noopener">
+            <a href="https://github.com/Vipura/1st-Year-Web-Development.git" class="project-card-link" target="_blank" rel="noopener">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 4: Smart Campus API -->
+        <div class="project-card reveal">
+          <div class="project-card-image">
+            <img src="assets/smart_campus_api.png" alt="Smart Campus API">
+            <div class="overlay"></div>
+            <span class="project-card-badge solo">Solo Project</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Smart Campus API</h3>
+            <p class="project-card-desc">
+              A pure JAX-RS backend architecture simulating a Smart Campus environment. Features strictly RESTful endpoints, custom exception mapping, and sub-resource routing without relying on external databases.
+            </p>
+            <div class="project-card-tech">
+              <span>Java</span>
+              <span>JAX-RS</span>
+              <span>RESTful</span>
+              <span>Backend</span>
+            </div>
+            <a href="https://github.com/Vipura/5COSC022W-Smart-Campus-API.git" class="project-card-link" target="_blank" rel="noopener">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 5: Custom Network Sniffer -->
+        <div class="project-card reveal reveal-delay-1">
+          <div class="project-card-image">
+            <img src="assets/network_sniffer.png" alt="Custom Network Sniffer">
+            <div class="overlay"></div>
+            <span class="project-card-badge solo">Solo Project</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Custom Network Sniffer</h3>
+            <p class="project-card-desc">
+              OSI-layer-aware packet sniffer in pure Python with a live cybersecurity dashboard, built without Scapy to demonstrate raw protocol parsing at the bit level.
+            </p>
+            <div class="project-card-tech">
+              <span>Python</span>
+              <span>Cybersecurity</span>
+              <span>Networking</span>
+              <span>OSI Layer</span>
+            </div>
+            <a href="https://github.com/Vipura/Custom-Network-Sniffer.git" class="project-card-link" target="_blank" rel="noopener">
+              View on GitHub
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Project 6: Zero Knowledge Password Vault -->
+        <div class="project-card reveal reveal-delay-2">
+          <div class="project-card-image">
+            <img src="assets/password_vault.png" alt="Zero-Knowledge Password Vault">
+            <div class="overlay"></div>
+            <span class="project-card-badge solo">Solo Project</span>
+          </div>
+          <div class="project-card-body">
+            <h3 class="project-card-title">Zero-Knowledge Password Vault</h3>
+            <p class="project-card-desc">
+              A privacy-first, zero-knowledge password vault built with Flutter and Dart, featuring AES-256-GCM encryption and a cryptographically secure password generator.
+            </p>
+            <div class="project-card-tech">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Cryptography</span>
+              <span>AES-256</span>
+            </div>
+            <a href="https://github.com/Vipura/Zero-Knowledge-Password-Vault.git" class="project-card-link" target="_blank" rel="noopener">
               View on GitHub
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
             </a>
@@ -449,20 +632,103 @@
 
       <div class="certs-grid">
         <div class="cert-card reveal">
-          <div class="cert-icon">🐍</div>
+          <div class="cert-icon cert-icon-linkedin">in</div>
           <div class="cert-info">
             <h3>Advanced Python</h3>
             <p>Provides intermediate level Python training covering advanced concepts and best practices.</p>
-            <span class="cert-year">2018</span>
+            <div class="cert-footer">
+              <span class="cert-year">2018</span>
+              <a href="https://www.linkedin.com/learning/certificates/6bab58cc815a5d4c47723eb0e668335be8917dd729d6cb6f0a00283d251c99a6?u=42314660" target="_blank" rel="noopener" class="cert-link">
+                View Certificate
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
           </div>
         </div>
 
         <div class="cert-card reveal reveal-delay-1">
-          <div class="cert-icon">📊</div>
+          <div class="cert-icon cert-icon-linkedin">in</div>
           <div class="cert-info">
             <h3>Python Data Analysis</h3>
             <p>Covers essential concepts of handling data structures in Python for data analysis workflows.</p>
-            <span class="cert-year">2020</span>
+            <div class="cert-footer">
+              <span class="cert-year">2020</span>
+              <a href="https://www.linkedin.com/learning/certificates/1f81bccb6704edfb21cce7eb3b4737a065b3713741293189cad69208e5c93c87?u=42314660" target="_blank" rel="noopener" class="cert-link">
+                View Certificate
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-2">
+          <div class="cert-icon cert-icon-linkedin">in</div>
+          <div class="cert-info">
+            <h3>Intro to Prompt Engineering for Generative AI</h3>
+            <p>Covers AI prompting fundamentals — crafting effective prompts for large language models and generative AI systems.</p>
+            <div class="cert-footer">
+              <span class="cert-year">2026</span>
+              <a href="https://www.linkedin.com/learning/certificates/8d4324cab739feeb0d2df7a1a0a32c5a6fe49ddd8311c25620049b071a6cd48c?u=42314660" target="_blank" rel="noopener" class="cert-link">
+                View Certificate
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-3">
+          <div class="cert-icon cert-icon-linkedin">in</div>
+          <div class="cert-info">
+            <h3>Microsoft Azure AI Essentials</h3>
+            <p>Explores Azure AI workloads and machine learning on Azure, covering core cloud AI services and deployment concepts.</p>
+            <div class="cert-footer">
+              <span class="cert-year">2026</span>
+              <a href="https://www.linkedin.com/learning/certificates/3c014124b5a94fddf231eb804b52f9ce670a9ae8335d0eb77a56ba29406b7b27?u=42314660" target="_blank" rel="noopener" class="cert-link">
+                View Certificate
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-4">
+          <div class="cert-icon cert-icon-linkedin">in</div>
+          <div class="cert-info">
+            <h3>Advanced Prompt Engineering Techniques</h3>
+            <p>Dives into advanced strategies for prompt design — few-shot learning, chain-of-thought, and output control techniques.</p>
+            <div class="cert-footer">
+              <span class="cert-year">2026</span>
+              <a href="https://www.linkedin.com/learning/certificates/f5de0324dd376c2a1e3599d61c2250a0555fc177f2f419e16b9828380cf144f7?u=42314660" target="_blank" rel="noopener" class="cert-link">
+                View Certificate
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal reveal-delay-5">
+          <div class="cert-icon cert-icon-linkedin">in</div>
+          <div class="cert-info">
+            <h3>Python GUI Development with Tkinter</h3>
+            <p>Covers GUI development in Python using the Tkinter library, focusing on building desktop applications.</p>
+            <div class="cert-footer">
+              <span class="cert-year">2025</span>
+              <a href="https://www.linkedin.com/learning/certificates/de93c7a2d8b99f3bd176388c116db878890bec034a212bcbebba28bd29290636?u=42314660" target="_blank" rel="noopener" class="cert-link">
+                View Certificate
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cert-card reveal">
+          <div class="cert-icon">🛡️</div>
+          <div class="cert-info">
+            <h3>Cybersecurity & Networking Systems</h3>
+            <p>University module covering network administration and security basics. Includes practical experience with Linux, pfSense, and Proxmox virtualization.</p>
+            <div class="cert-footer">
+              <span class="cert-year" style="color: var(--accent-orange); border: 1px solid var(--accent-orange-dim); padding: 4px 10px; border-radius: 20px;">Ongoing</span>
+            </div>
           </div>
         </div>
       </div>
