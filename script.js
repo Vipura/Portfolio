@@ -1,3 +1,52 @@
+// ===== SPLASH SCREEN =====
+(function () {
+  const splash = document.getElementById('splash-screen');
+  if (!splash) return;
+
+  // Lock scroll during splash
+  document.body.classList.add('splash-active');
+
+  // Create floating particles
+  const particlesContainer = document.getElementById('splash-particles');
+  const particleCount = 40;
+  const colors = ['#c5ff41', '#f46c38', 'rgba(197, 255, 65, 0.5)', 'rgba(244, 108, 56, 0.4)'];
+
+  for (let i = 0; i < particleCount; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('splash-particle');
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = 50 + Math.random() * 50 + '%';
+    particle.style.width = (Math.random() * 3 + 1) + 'px';
+    particle.style.height = particle.style.width;
+    particle.style.background = colors[Math.floor(Math.random() * colors.length)];
+    particle.style.animationDuration = (Math.random() * 4 + 3) + 's';
+    particle.style.animationDelay = (Math.random() * 4) + 's';
+    particlesContainer.appendChild(particle);
+  }
+
+  // Add glow shimmer to letters after they animate in
+  const letters = splash.querySelectorAll('.splash-letter');
+  letters.forEach((letter, idx) => {
+    const delay = 400 + idx * 70 + 700; // match animation-delay + duration
+    setTimeout(() => {
+      letter.classList.add('glow');
+    }, delay);
+  });
+
+  // Dismiss splash after 5 seconds
+  const SPLASH_DURATION = 5000;
+
+  setTimeout(() => {
+    splash.classList.add('splash-exit');
+    document.body.classList.remove('splash-active');
+
+    // Remove from DOM after transition completes
+    setTimeout(() => {
+      splash.remove();
+    }, 800);
+  }, SPLASH_DURATION);
+})();
+
 // ===== NAVBAR SCROLL EFFECT =====
 const navbar = document.querySelector('.navbar');
 
@@ -201,3 +250,27 @@ const counterObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 statNumbers.forEach(el => counterObserver.observe(el));
+
+// ===== TIMELINE SCROLL ANIMATION =====
+const timeline = document.querySelector('.timeline');
+if (timeline) {
+  window.addEventListener('scroll', () => {
+    const rect = timeline.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+    
+    const startOffset = windowHeight * 0.7;
+    const scrolledPast = startOffset - rect.top;
+    const animationDistance = rect.height; 
+    
+    let progress = 0;
+    if (scrolledPast > 0) {
+      progress = (scrolledPast / animationDistance) * 100;
+    }
+    
+    progress = Math.max(0, Math.min(100, progress));
+    timeline.style.setProperty('--scroll-progress', `${progress}%`);
+  });
+  
+  // Trigger once to set initial state
+  window.dispatchEvent(new Event('scroll'));
+}
