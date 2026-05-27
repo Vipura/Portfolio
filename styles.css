@@ -175,3 +175,132 @@ ul, ol {
 .reveal-delay-4 { transition-delay: 0.4s; }
 .reveal-delay-5 { transition-delay: 0.5s; }
 
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 20px 0;
+  transition: all var(--transition-base);
+}
+
+.navbar.scrolled {
+  padding: 12px 0;
+  background: rgba(10, 10, 11, 0.85);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.navbar .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.nav-logo span {
+  color: var(--accent-lime);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  position: relative;
+  padding: 4px 0;
+  transition: color var(--transition-fast);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-lime);
+  border-radius: 1px;
+  transition: width var(--transition-base);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--bg-primary);
+  background: var(--accent-lime);
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.nav-cta:hover {
+  background: #d4ff6a;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(197, 255, 65, 0.3);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 4px;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all var(--transition-base);
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
