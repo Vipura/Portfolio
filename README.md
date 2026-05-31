@@ -1,35 +1,16 @@
-# Vipura Devnak's Portfolio
+# React + Vite
 
-A modern, responsive, and beautifully designed personal portfolio website built with HTML, CSS, and Vanilla JavaScript.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## 🚀 Live Demo
+Currently, two official plugins are available:
 
-You can view the live version of this portfolio here: [https://vipura.github.io](https://vipura.github.io)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## 🛠️ Built With
+## React Compiler
 
-* **HTML5** - Semantic web structure and layout
-* **CSS3** - Custom styling, CSS Grid/Flexbox layouts, and scroll animations
-* **Vanilla JavaScript** - Interactive UI elements, intersection observers, and dynamic scroll events
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## ⚙️ Running Locally
+## Expanding the ESLint configuration
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Vipura/vipura.github.io.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd vipura.github.io
-   ```
-3. Open `index.html` directly in your web browser, or use a tool like **VS Code Live Server** to run it locally with hot-reloading.
-
-## 🌐 Deployment
-
-This project is configured to deploy directly to GitHub Pages. Since it is built entirely with vanilla web technologies, no build tools or package managers are required. To deploy a new version, simply commit your changes and push them to the `main` branch:
-
-```bash
-git add .
-git commit -m "Update portfolio"
-git push origin main
-```
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
