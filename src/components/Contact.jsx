@@ -38,6 +38,11 @@ export default function Contact() {
     subject: '',
     message: '',
   });
+  const [formStatus, setFormStatus] = useState({
+    submitting: false,
+    message: '',
+    isError: false,
+  });
 
   const handleChange = useCallback((e) => {
     const { id, value } = e.target;
@@ -50,14 +55,40 @@ export default function Contact() {
     setFormData(prev => ({ ...prev, [fieldMap[id]]: value }));
   }, []);
 
-  const handleSubmit = useCallback((e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const { name, email, subject, message } = formData;
-    const mailtoLink = `mailto:vipuradevnak@gmail.com?subject=${encodeURIComponent(subject || 'Portfolio Contact')}&body=${encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\n${message}`
-    )}`;
-    window.location.href = mailtoLink;
-  }, [formData]);
+    setFormStatus({ submitting: true, message: 'Sending message...', isError: false });
+
+    const submissionData = {
+      access_key: "85837d3d-01b2-4d65-9161-147835ef05b2",
+      subject: formData.subject || "New message from your portfolio",
+      from_name: "Portfolio Contact Form",
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(submissionData)
+      });
+      const result = await response.json();
+      if (response.status === 200) {
+        setFormStatus({ submitting: false, message: 'Message sent successfully!', isError: false });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setFormStatus({ submitting: false, message: '', isError: false }), 5000);
+      } else {
+        setFormStatus({ submitting: false, message: result.message || 'Something went wrong.', isError: true });
+      }
+    } catch (error) {
+      setFormStatus({ submitting: false, message: 'Failed to send message. Please try again.', isError: true });
+    }
+  };
 
   return (
     <section className="contact section" id="contact">
@@ -148,13 +179,20 @@ export default function Contact() {
               <label htmlFor="form-message">Message</label>
               <textarea id="form-message" placeholder="Tell me about your project or opportunity..." required onChange={handleChange} value={formData.message}></textarea>
             </div>
-            <button type="submit" className="form-submit">
-              Send Message
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <line x1="22" y1="2" x2="11" y2="13" />
-                <polygon points="22 2 15 22 11 13 2 9 22 2" />
-              </svg>
+            <button type="submit" className="form-submit" disabled={formStatus.submitting}>
+              {formStatus.submitting ? 'Sending...' : 'Send Message'}
+              {!formStatus.submitting && (
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13" />
+                  <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                </svg>
+              )}
             </button>
+            {formStatus.message && (
+              <div style={{ marginTop: '15px', color: formStatus.isError ? '#ff4d4d' : '#4dff4d', fontSize: '0.9rem', textAlign: 'center' }}>
+                {formStatus.message}
+              </div>
+            )}
           </form>
         </div>
       </div>
