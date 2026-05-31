@@ -14,7 +14,7 @@ export default function About() {
       <div className="container">
         <div className="about-image reveal">
           <div className="about-image-frame">
-            <img src="assets/profile.png" alt="Vipura Devnak portrait" />
+            <img src="assets/Profile%202.png" alt="Vipura Devnak portrait" />
           </div>
           <div className="about-experience-badge">
             <div className="number">2+</div>

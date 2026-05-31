@@ -156,7 +156,7 @@ export default function Hero() {
 
         <div className="hero-visual reveal reveal-delay-2">
           <div className="hero-image-wrapper">
-            <img src="assets/profile.png" alt="Vipura Devnak — Full Stack Developer" id="hero-profile-img" />
+            <img src="assets/Profile%202.png" alt="Vipura Devnak — Full Stack Developer" id="hero-profile-img" />
 
             {FLOAT_CARDS.map((card, i) => (
               <div className="hero-float-card" key={i}>
