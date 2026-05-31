@@ -1,3 +1,5 @@
+import { FaCrown, FaSyncAlt, FaRegComments, FaHandshake, FaBrain, FaPalette } from 'react-icons/fa';
+
 const STACK_DATA = [
   {
     category: 'Programming',
@@ -50,12 +52,12 @@ const STACK_DATA = [
 ];
 
 const SOFT_SKILLS = [
-  { emoji: '👑', label: 'Leadership' },
-  { emoji: '🔄', label: 'Adaptability' },
-  { emoji: '💬', label: 'Communication' },
-  { emoji: '🤝', label: 'Teamwork' },
-  { emoji: '🧠', label: 'Critical Thinking' },
-  { emoji: '🎨', label: 'Creativity' },
+  { emoji: <FaCrown />, label: 'Leadership' },
+  { emoji: <FaSyncAlt />, label: 'Adaptability' },
+  { emoji: <FaRegComments />, label: 'Communication' },
+  { emoji: <FaHandshake />, label: 'Teamwork' },
+  { emoji: <FaBrain />, label: 'Critical Thinking' },
+  { emoji: <FaPalette />, label: 'Creativity' },
 ];
 
 export default function Stack() {

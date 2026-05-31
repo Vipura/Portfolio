@@ -1,3 +1,5 @@
+import { FiShield } from 'react-icons/fi';
+
 const ArrowIcon = () => (
   <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
     <path d="M7 17L17 7" /><path d="M7 7h10v10" />
@@ -83,7 +85,7 @@ export default function Certifications() {
           {CERTS.map((cert, i) => (
             <div className={`cert-card reveal ${cert.delayClass}`} key={i}>
               <div className={cert.iconType === 'linkedin' ? 'cert-icon cert-icon-linkedin' : 'cert-icon'}>
-                {cert.iconType === 'linkedin' ? 'in' : '🛡️'}
+                {cert.iconType === 'linkedin' ? 'in' : <FiShield />}
               </div>
               <div className="cert-info">
                 <h3>{cert.title}</h3>

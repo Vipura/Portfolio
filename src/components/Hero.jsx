@@ -1,4 +1,6 @@
 import { useEffect, useRef } from 'react';
+import { FiCode, FiAward, FiLock } from 'react-icons/fi';
+import { MdWavingHand } from 'react-icons/md';
 
 const TITLES = [
   'Full Stack Developer',
@@ -14,9 +16,9 @@ const STATS = [
 ];
 
 const FLOAT_CARDS = [
-  { emoji: '💻', colorClass: 'lime', text: 'Full Stack Dev', sub: 'Python • Java • Web' },
-  { emoji: '🎓', colorClass: 'orange', text: 'CS Undergraduate', sub: 'Westminster, UK' },
-  { emoji: '🔒', colorClass: 'lime', text: 'Cybersecurity', sub: 'Aspiring Expert' },
+  { emoji: <FiCode size={24} />, colorClass: 'lime', text: 'Full Stack Dev', sub: 'Python • Java • Web' },
+  { emoji: <FiAward size={24} />, colorClass: 'orange', text: 'CS Undergraduate', sub: 'Westminster, UK' },
+  { emoji: <FiLock size={24} />, colorClass: 'lime', text: 'Cybersecurity', sub: 'Aspiring Expert' },
 ];
 
 export default function Hero() {
@@ -100,7 +102,7 @@ export default function Hero() {
       <div className="container">
         <div className="hero-content">
           <div className="hero-greeting reveal">
-            <span className="wave">👋</span>
+            <span className="wave"><MdWavingHand /></span>
             <span>Hey there, I'm</span>
           </div>
 

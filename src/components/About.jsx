@@ -1,8 +1,11 @@
+import { FaPython, FaJava } from 'react-icons/fa';
+import { FiGlobe, FiLock } from 'react-icons/fi';
+
 const HIGHLIGHTS = [
-  { icon: '🐍', text: 'Python Development' },
-  { icon: '☕', text: 'Java & JavaFX' },
-  { icon: '🌐', text: 'Web Technologies' },
-  { icon: '🔐', text: 'Cybersecurity' },
+  { icon: <FaPython />, text: 'Python Development' },
+  { icon: <FaJava />, text: 'Java & JavaFX' },
+  { icon: <FiGlobe />, text: 'Web Technologies' },
+  { icon: <FiLock />, text: 'Cybersecurity' },
 ];
 
 export default function About() {
